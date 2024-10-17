@@ -26,6 +26,10 @@ const InstrumentSchema = new Schema({
           type: Number, // Измените на Number
           required: true,
      },
+     ton: {
+          type: Number,
+          required: true,
+     }
 
 });
 
