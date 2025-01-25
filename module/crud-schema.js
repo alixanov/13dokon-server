@@ -5,6 +5,10 @@ const InstrumentSchema = new Schema({
           type: String,
           required: true,
      },
+     icon: {
+          type: String,
+          required: true,
+     },
      nomi: {
           type: String,
           required: true,

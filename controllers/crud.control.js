@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken');
 
 const addProduct = async (req, res) => {
      try {
-          // const { rasm, nomi, soni, narxi } = req.body
+          // const { rasm, ,icon,nomi, soni, narxi } = req.body
           const newProduct = await new InstrumentSchema(req.body)
           await newProduct.save();
           res.status(201).json(newProduct)
@@ -43,11 +43,11 @@ const deleteProduct = async (req, res) => {
 const updateProduct = async (req, res) => {
      try {
           const { id } = req.params;
-          const { rasm, nomi, malumoti, turi, soni, narxi,ton } = req.body;
+          const { rasm,icon ,nomi, malumoti, turi, soni, narxi,ton } = req.body;
 
           const updatedProduct = await InstrumentSchema.findByIdAndUpdate(
                id,
-               { rasm, nomi, malumoti, turi, soni, narxi ,ton},
+               { rasm,icon, nomi, malumoti, turi, soni, narxi ,ton},
                { new: true } // Вернуть обновленный документ
           );
 
